@@ -21,15 +21,14 @@ export default function Provider({ children }: { children: React.ReactNode }) {
   };
 
   return (
-  <SessionProvider refetchInterval={5*6}>
-
-    <ImageKitProvider
-      publicKey={publicKey}
-      urlEndpoint={urlEndpoint}
-      authenticator={authenticator}
+    <SessionProvider refetchInterval={5 * 6}>
+      <ImageKitProvider
+        publicKey={publicKey}
+        urlEndpoint={urlEndpoint}
+        authenticator={authenticator}
       >
-      {children}
-    </ImageKitProvider>
-      </SessionProvider>
+        {children}
+      </ImageKitProvider>
+    </SessionProvider>
   );
 }

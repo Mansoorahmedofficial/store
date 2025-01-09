@@ -46,6 +46,5 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ newProduct }, { status: 200 });
   } catch (error) {
     console.log("error while doing post requist", error);
-    
   }
 }
